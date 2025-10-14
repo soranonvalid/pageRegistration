@@ -41,7 +41,10 @@ export default function Login() {
         <h1 className="text-5xl font-extrabold text-white">Sign In</h1>
         <form
           className="mt-8 flex w-80 flex-col space-y-4 animate-slideDown"
-          onSubmit={handleSubmit((data) => onSubmit(data))}
+          onSubmit={(e) => {
+            e.preventDefault();
+            handleSubmit((data) => onSubmit(data));
+          }}
         >
           <input
             type="text"

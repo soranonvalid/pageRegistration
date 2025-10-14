@@ -1,7 +1,8 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Login from "../pages/login";
 import Register from "../pages/register";
-import Dashboard from "../pages/dashboard";
+import UserDashboard from "@/pages/dashboard/user";
+import ProductDashboard from "@/pages/dashboard/product";
 import NotFound from "../pages/not-found";
 
 export default function Route() {
@@ -19,8 +20,12 @@ export default function Route() {
       element: <Register />,
     },
     {
-      path: "/dashboard",
-      element: <Dashboard />,
+      path: "/dashboard/user",
+      element: <UserDashboard />,
+    },
+    {
+      path: "/dashboard/product",
+      element: <ProductDashboard />,
     },
   ]);
 
