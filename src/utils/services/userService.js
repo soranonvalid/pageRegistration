@@ -4,7 +4,7 @@ export const getUsers = async () => {
   try {
     const res = await axios.get("http://localhost:5000/users");
     console.log(res);
-    return res.data.data.users;
+    return res.data.data;
   } catch (error) {
     console.log(error);
   }

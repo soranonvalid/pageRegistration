@@ -1,4 +1,4 @@
-import { Info, Pencil, Trash, Trash2 } from "lucide-react";
+import { Info, Pencil, Trash2 } from "lucide-react";
 import {
   AlertDialog,
   AlertDialogAction,

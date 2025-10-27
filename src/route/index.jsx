@@ -1,9 +1,10 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Login from "../pages/login";
 import Register from "../pages/register";
-import UserDashboard from "@/pages/dashboard/user";
+import UserDashboard from "@/pages/dashboard/dashboardUser/user";
 import ProductDashboard from "@/pages/dashboard/product";
 import NotFound from "../pages/not-found";
+import AddUser from "@/pages/dashboard/dashboardUser/addUser";
 
 export default function Route() {
   const router = createBrowserRouter([
@@ -22,6 +23,10 @@ export default function Route() {
     {
       path: "/dashboard/user",
       element: <UserDashboard />,
+    },
+    {
+      path: "/dashboard/user/add",
+      element: <AddUser />,
     },
     {
       path: "/dashboard/product",
