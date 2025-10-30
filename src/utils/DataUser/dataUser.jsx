@@ -11,6 +11,7 @@ import {
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 import * as userService from "@/utils/services/userService.js";
+import { useNavigate } from "react-router-dom";
 
 async function deleteHandler(id) {
   await userService.deleteUsers(id);
@@ -50,11 +51,16 @@ export const columnsUser = [
     header: "aksi",
     cell: (row) => {
       const id = row.row.original.id;
+      const navigate = useNavigate();
 
       return (
         <div className="flex gap-5">
           {/* info */}
-          <button>
+          <button
+            onClick={() => {
+              navigate(`/dashboard/user/${id}`);
+            }}
+          >
             <Info size={15} />
           </button>
 

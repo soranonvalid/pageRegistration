@@ -5,6 +5,7 @@ import UserDashboard from "@/pages/dashboard/dashboardUser/user";
 import ProductDashboard from "@/pages/dashboard/product";
 import NotFound from "../pages/not-found";
 import AddUser from "@/pages/dashboard/dashboardUser/addUser";
+import DetailUser from "@/pages/dashboard/dashboardUser/detailUser";
 
 export default function Route() {
   const router = createBrowserRouter([
@@ -23,6 +24,10 @@ export default function Route() {
     {
       path: "/dashboard/user",
       element: <UserDashboard />,
+    },
+    {
+      path: "/dashboard/user/:id",
+      element: <DetailUser />,
     },
     {
       path: "/dashboard/user/add",
